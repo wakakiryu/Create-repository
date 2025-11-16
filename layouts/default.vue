@@ -3,10 +3,10 @@
     <!-- ヘッダー -->
     <header class="app-header">
       <div class="logo">
-        <NuxtLink to="/">My Portfolio</NuxtLink>
+        <NuxtLink to="/"x>Ryu shop</NuxtLink>
       </div>
       <nav class="nav-links">
-        <NuxtLink to="/">Home</NuxtLink>
+        <NuxtLink to="/">fashion</NuxtLink>
         <NuxtLink to="/about">About</NuxtLink>
         <NuxtLink to="/skills">Skills</NuxtLink>
         <NuxtLink to="/contact">Contact</NuxtLink>
@@ -37,7 +37,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0370e5;
+  background-color: #505f6e;
   color: white;
   padding: 15px 20px;
 }
@@ -71,6 +71,6 @@ main {
   background-color: #222;
   color: #fff;
   text-align: center;
-  padding: 15px 0;
+  padding: 1px 0;
 }
 </style>
