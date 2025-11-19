@@ -1,26 +1,19 @@
 <template>
   <div class="app-wrapper">
-    <!-- ヘッダー -->
     <header class="app-header">
-      <div class="logo">
-        <NuxtLink to="/"x>Ryu shop</NuxtLink>
+      <div class="header-title">
+        <NuxtLink to="/"></NuxtLink>
       </div>
       <nav class="nav-links">
-        <NuxtLink to="/">fashion</NuxtLink>
-        <NuxtLink to="/about">About</NuxtLink>
-        <NuxtLink to="/skills">Skills</NuxtLink>
-        <NuxtLink to="/contact">Contact</NuxtLink>
-      </nav>
+        </nav>
     </header>
 
-    <!-- ページコンテンツ -->
     <main>
       <slot />
     </main>
 
-    <!-- フッター -->
     <footer class="app-footer">
-      <p>&copy; 2025 My Portfolio</p>
+      <p>&copy; 2025 by wakaki</p>
     </footer>
   </div>
 </template>
@@ -34,36 +27,50 @@
 
 /* ヘッダー */
 .app-header {
+  font-family: 'Sawarabi Mincho', serif;
+  /* ⬇️ 固定解除 ⬇️ */
+  /* position: fixed; を削除 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  height: 70px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; 
   align-items: center;
-  background-color: #505f6e;
-  color: white;
-  padding: 15px 20px;
+  
+  background-image: url('~/assets/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  
+  color: #000000; /* 文字色 */
+
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.app-header .logo a {
-  color: white;
-  font-weight: bold;
+/* ヘッダータイトルのスタイルを調整 */
+.header-title a {
   font-size: 1.5em;
-  text-decoration: none;
-}
-
-.nav-links a {
-  margin-left: 20px;
-  color: white;
-  text-decoration: none;
   font-weight: bold;
+  color: #333333;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+/* ナビゲーションリンク (空のため非表示) */
+.nav-links {
+    display: none; 
 }
 
-/* main が残りの高さを確保 */
+
+/* main をヘッダー分下げる 
+   ⬇️ ヘッダー固定解除に伴い margin-top を削除 ⬇️ */
 main {
   flex: 1;
   padding: 20px;
+  /* margin-top: 70px; を削除 */
 }
 
 /* フッター */
@@ -71,6 +78,6 @@ main {
   background-color: #222;
   color: #fff;
   text-align: center;
-  padding: 1px 0;
+  padding: 0.0001cm 0;
 }
 </style>
