@@ -1,9 +1,9 @@
 <template>
   <div class="site">
     <a class="skip" href="#main">本文へスキップ</a>
-    <header><NuxtLink class="logo" to="/">myhobby<span>暮らしと学びの、PCガイド</span></NuxtLink><nav aria-label="メインナビゲーション"><NuxtLink to="/#guide">選び方</NuxtLink><NuxtLink to="/#products">商品を探す</NuxtLink><NuxtLink to="/#policy">掲載方針</NuxtLink></nav></header>
+    <header><NuxtLink class="logo" to="/">myhobby<span>暮らしと学びの、PCガイド</span></NuxtLink><nav aria-label="メインナビゲーション"><NuxtLink to="/guides">選び方</NuxtLink><NuxtLink to="/#products">商品を探す</NuxtLink><NuxtLink to="/editorial-policy">掲載方針</NuxtLink></nav></header>
     <main id="main"><slot /></main>
-    <footer><NuxtLink class="logo" to="/">myhobby</NuxtLink><p>自分に合う一台で、新しいことを。</p><small>© {{ new Date().getFullYear() }} wakaki · MyHobby</small></footer>
+    <footer><NuxtLink class="logo" to="/">myhobby</NuxtLink><p>自分に合う一台で、新しいことを。</p><p><NuxtLink to="/about">運営者情報</NuxtLink> · <NuxtLink to="/editorial-policy">広告・編集方針</NuxtLink> · <NuxtLink to="/guides">選び方ガイド</NuxtLink></p><small>© {{ new Date().getFullYear() }} wakaki · MyHobby</small></footer>
   </div>
 </template>
 <style>

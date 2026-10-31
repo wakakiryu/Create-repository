@@ -1,110 +1,30 @@
-g<script setup lang="ts">
-const rakutenProductsUnder30k = [
-  {
-    title: '【大人気】TOTOAI ノートパソコン Windows11 Office付き 新品',
-    link: 'https://hb.afl.rakuten.co.jp/ichiba/4e24c161.4905bfb1.4e24c162.40a66e19/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftotoai%2Fnotebook01%2F&link_type=pict',
-    image: 'https://hbb.afl.rakuten.co.jp/hgb/4e24c161.4905bfb1.4e24c162.40a66e19/?me_id=1431506&item_id=10000001&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ftotoai%2Fcabinet%2F11289362%2Fnotebook01%2Fnotebook01-666-2.jpg%3F_ex%3D240x240&s=240x240&t=pict',
-    alt: 'TOTOAI ノートパソコン',
-  },
-  {
-    title: '【新商品】UPC1114 ノートパソコン Windows11 Office付き',
-    link: 'https://hb.afl.rakuten.co.jp/ichiba/4e24d85d.630b967c.4e24d85e.c6baa10e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fupc1114%2F10006179%2F&link_type=pict',
-    image: 'https://hbb.afl.rakuten.co.jp/hgb/4e24d85d.630b967c.4e24d85e.c6baa10e/?me_id=1349304&item_id=10006382&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fupc1114%2Fcabinet%2F11614410%2F11614421%2Fimgrc0108185560.jpg%3F_ex%3D240x240&s=240x240&t=pict',
-    alt: 'UPC1114 ノートパソコン',
-  }
-]
-
-const rakutenProductsOver50k = [
-  {
-    title: '【中古】東芝 dynabook B55/DP Corei3 16GBメモリ 15.6型',
-    link: 'https://hb.afl.rakuten.co.jp/ichiba/4e5496d4.2cf0cc60.4e5496d6.cf16317e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpckujira%2Fms071122%2F&link_type=picttext',
-    image: 'https://hbb.afl.rakuten.co.jp/hgb/4e5496d4.2cf0cc60.4e5496d6.cf16317e/?me_id=1239152&item_id=10238708&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fpckujira%2Fcabinet%2Fdir92%2Fms071122-1.jpg%3F_ex%3D240x240&s=240x240&t=picttext',
-    alt: '中古 ノートパソコン Office付き 東芝 dynabook B55/DP',
-  },
-  {
-    title: 'TOTOAI ノートパソコン Windows11 Office付き (別モデル)',
-    link: 'https://hb.afl.rakuten.co.jp/ichiba/4e24c161.4905bfb1.4e24c162.40a66e19/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftotoai%2Fnotebook21-1%2F&link_type=pict',
-    image: 'https://hbb.afl.rakuten.co.jp/hgb/4e24c161.4905bfb1.4e24c162.40a66e19/?me_id=1431506&item_id=10000051&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ftotoai%2Fcabinet%2F11289362%2Fnotebook21%2Fnotebook21-4.jpg%3F_ex%3D240x240&s=240x240&t=pict',
-    alt: 'TOTOAI ノートパソコン 別モデル',
-  }
-]
-
-const rakutenProductsUnder70k = [
-  {
-    title: '【新商品】soo-ya ノートパソコン Windows11',
-    link: 'https://hb.afl.rakuten.co.jp/ichiba/4e54b98c.646a2121.4e54b98d.29084ff4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsoo-ya%2Fm7-us-win11%2F&link_type=pict',
-    image: 'https://hbb.afl.rakuten.co.jp/hgb/4e54b98c.646a2121.4e54b98d.29084ff4/?me_id=1319096&item_id=10001148&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fsoo-ya%2Fcabinet%2F09255886%2F10285182%2Fq7-rxx.jpg%3F_ex%3D240x240&s=240x240&t=pict',
-    alt: 'soo-ya ノートパソコン',
-  },
-  {
-    title: 'PHIPHI 中古ノートパソコン Windows11 Office付き',
-    link: 'https://hb.afl.rakuten.co.jp/ichiba/4e1e7416.aed52727.4e1e7417.b6170c47/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fphi777%2Fspbjb003%2F&link_type=pict',
-    image: 'https://hbb.afl.rakuten.co.jp/hgb/4e1e7416.aed52727.4e1e7417.b6170c47/?me_id=1374699&item_id=10006156&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fphi777%2Fcabinet%2F10585142%2F11515156%2F11515158%2Fimgrc0155832898.jpg%3F_ex%3D240x240&s=240x240&t=pict',
-    alt: 'PHIPHI 中古ノートパソコン',
-  }
-]
-
-const rakutenProductsOver100k = [
-  {
-    title: 'PHIPHI 中古高性能ノートPC Office付き',
-    link: 'https://hb.afl.rakuten.co.jp/ichiba/4e1e7416.aed52727.4e1e7417.b6170c47/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fphi777%2Fbjb003%2F&link_type=pict',
-    image: 'https://hbb.afl.rakuten.co.jp/hgb/4e1e7416.aed52727.4e1e7417.b6170c47/?me_id=1374699&item_id=10005923&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fphi777%2Fcabinet%2F10585142%2F10647368%2Fimgrc0155229075.jpg%3F_ex%3D240x240&s=240x240&t=pict',
-    alt: 'PHIPHI 中古高性能ノートPC',
-  },
-  {
-    title: 'regian 高性能ノートパソコン Office付き',
-    link: 'https://hb.afl.rakuten.co.jp/ichiba/4e1e73d9.d2986449.4e1e73db.f62389ba/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fregian%2Fdn009%2F&link_type=pict',
-    image: 'https://hbb.afl.rakuten.co.jp/hgb/4e1e73d9.d2986449.4e1e73db.f62389ba/?me_id=1427909&item_id=10000125&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fregian%2Fcabinet%2F11076310%2Fimgrc0095513674.jpg%3F_ex%3D240x240&s=240x240&t=pict',
-    alt: 'regian 高性能ノートパソコン',
-  }
-]
+<script setup lang="ts">
+import { products } from '~/data/products'
+import { guides } from '~/data/guides'
+import { usageGuides } from '~/data/choosing'
 const query = ref('')
-const products = [...rakutenProductsUnder30k, ...rakutenProductsOver50k, ...rakutenProductsUnder70k, ...rakutenProductsOver100k].map((item, index) => ({
-  ...item, id: index,
-  title: item.title.replace(/【大人気】|【新商品】|高性能/g, ''),
-}))
-const filtered = computed(() => products.filter(item => item.title.toLowerCase().includes(query.value.trim().toLowerCase())))
-useSeoMeta({
-  title: 'MyHobby | はじめてのパソコン選び',
-  description: 'プログラミング学習や日々の作業に使うノートパソコンを探す。購入前に確認したい仕様・保証・Officeの違いと、楽天市場の商品情報をご案内します。',
-  ogTitle: 'MyHobby | はじめてのパソコン選び',
-  ogDescription: '自分の使い方に合う一台を、納得して選ぼう。',
-  ogType: 'website',
-})
-useHead({ htmlAttrs: { lang: 'ja' }, link: [{ rel: 'canonical', href: 'https://www.myhobby.jp/' }] })
+const selected = ref<string[]>([])
+const filter = ref('すべて')
+const usage = ref('home')
+const activeUsage = computed(() => usageGuides.find(g => g.id === usage.value)!)
+const filtered = computed(() => products.filter(p => p.title.toLowerCase().includes(query.value.trim().toLowerCase()) && (filter.value === 'すべて' || p.condition === '中古')))
+const compared = computed(() => products.filter(p => selected.value.includes(p.id)))
+const rows = [{key:'cpu',label:'CPU'},{key:'memory',label:'メモリ'},{key:'ssd',label:'ストレージ'},{key:'display',label:'画面'},{key:'weight',label:'重量'},{key:'condition',label:'状態'},{key:'office',label:'Office'},{key:'warranty',label:'保証'}] as const
+usePageSeo('ノートパソコンの選び方と比較｜用途別の判断基準・掲載モデルの注意点', '仕事・学業・プログラミング用のノートPCを用途と仕様で比較。CPU、メモリ、画面、保証の違いと、販売ページで確認した掲載モデルの注意点を解説します。', '/')
+useHead({script:[{type:'application/ld+json',innerHTML:JSON.stringify({'@context':'https://schema.org','@type':'WebSite',name:'MyHobby',url:'https://www.myhobby.jp/',inLanguage:'ja'})}]})
 </script>
-
-<template>
-  <div>
-    <section class="hero">
-      <div><p class="eyebrow">MYHOBBY / PC GUIDE</p><h1>はじめての一台を、<br>納得して選ぼう。</h1><p class="lead">学ぶ、つくる、日々を楽しむ。<br>使い方に合うパソコンを見つけるための、小さなガイド。</p><a class="button" href="#products">パソコンを探す →</a> <a class="text-link" href="#guide">選び方を読む</a></div>
-      <aside class="hero-note"><span>BEFORE YOU BUY</span><h2>値段の前に、<br>使い方から。</h2><p>使うソフト → 必要な仕様 → 保証と価格。<br>この順番で確認してみましょう。</p><a href="#guide">購入前のチェックポイント ↗</a></aside>
-    </section>
-    <p class="disclosure">広告：このページには楽天アフィリエイトのリンクが含まれます。リンク経由の購入により、運営者に報酬が発生する場合があります。</p>
-    <section id="guide" class="section">
-      <p class="eyebrow">01 / CHOOSE WITH CONFIDENCE</p><h2>あなたの使い方で、確認する。</h2>
-      <div class="guides">
-        <article><span class="number">01</span><h3>プログラミングを学ぶ</h3><p>授業や教材で使う開発ツールを先に確認。対応OS、必要なメモリ、ストレージ容量を照らし合わせましょう。</p></article>
-        <article><span class="number">02</span><h3>仕事や学業に使う</h3><p>「Office付き」だけでは種類は分かりません。必要なソフト名、ライセンス条件、オンライン会議用のカメラを確認しましょう。</p></article>
-        <article><span class="number">03</span><h3>外へ持ち出す</h3><p>本体と充電器の重さ、サイズ、端子を確認。中古の場合はバッテリーの状態と保証範囲もチェックしましょう。</p></article>
-      </div>
-    </section>
-    <section id="products" class="section">
-      <p class="eyebrow">02 / FIND YOUR NEXT PC</p><h2>気になるパソコンを探す。</h2><p>掲載商品を比較検討するための一覧です。実機レビューや性能ランキングではありません。</p>
-      <div class="search"><label for="search">商品名・ブランドで絞り込み</label><input id="search" v-model="query" type="search" placeholder="例：dynabook、TOTOAI"><span role="status">{{ filtered.length }} 件</span></div>
-      <p class="muted">価格・在庫・仕様は未確認です。最新の情報と選択した構成を、販売ページでご確認ください。</p>
-      <div class="products">
-        <article v-for="item in filtered" :key="item.id" class="product">
-          <a :href="item.link" target="_blank" rel="sponsored nofollow noopener"><img :src="item.image" :alt="item.alt" width="240" height="240" loading="lazy"></a>
-          <div class="product-body"><span class="eyebrow">楽天市場 / PR</span><h3>{{ item.title }}</h3><p class="muted">購入前に：CPUの型番・メモリ・保証期間を確認</p><a class="buy" :href="item.link" target="_blank" rel="sponsored nofollow noopener">楽天で価格・仕様を確認 ↗</a></div>
-        </article>
-      </div>
-      <p v-if="!filtered.length">該当する商品はありません。別の名前で検索してください。<button @click="query = ''">絞り込みを解除</button></p>
-    </section>
-    <section id="policy" class="section policy"><p class="eyebrow">OUR POLICY</p><h2>購入前の疑問を、ひとつずつ。</h2>
-      <details><summary>掲載商品は実際に使ってレビューしていますか？</summary><p>このページは商品への案内です。実機を使用した評価や検証結果は掲載していません。商品名は既存の掲載情報に基づき、仕様・付属品は販売ページで確認してください。</p></details>
-      <details><summary>中古パソコンで確認することは？</summary><p>状態、バッテリー、付属品、OSの対応状況、保証期間、返品条件を確認してください。同じモデル名でも構成が異なる場合があります。</p></details>
-      <details><summary>このサイトについて</summary><p>MyHobbyは、wakakiが運営するパソコン選びの情報サイトです。掲載順は性能や販売実績の順位を表すものではありません。購入・配送・返品のお問い合わせは、各販売店へお願いします。</p></details>
-    </section>
-  </div>
-</template>
+<template><div class="pc-magazine">
+  <header class="article-heading"><p class="eyebrow">MYHOBBY / NOTEBOOK GUIDE</p><h1>ノートパソコンの選び方と比較<br><span>用途と仕様から、自分に合う一台へ。</span></h1><div class="article-meta"><span>掲載情報確認：2026年10月31日</span><NuxtLink to="/about">編集：wakaki</NuxtLink><span class="ad-label">広告・PR</span></div><p class="intro">「安い」「Office付き」「高性能」。商品ページに並ぶ言葉だけでは、使い方に合うPCかどうかは分かりません。このページでは、用途を決めるところから、仕様の読み方、掲載モデルの比較、購入直前のチェックまでを順番に整理します。</p><p class="small-note">仕様は販売ページの記載に基づきます。実機での動作検証・性能計測は行っていません。価格・在庫・構成は購入時にご確認ください。</p></header>
+  <div class="magazine-layout"><aside class="contents"><nav aria-label="この記事の目次"><strong>この記事の目次</strong><a href="#decision">まず決めたい3つのこと</a><a href="#usage">用途から選び方を探す</a><a href="#specs">スペックの読み方</a><a href="#comparison">掲載モデルを一覧比較</a><a href="#products">機種別の特徴と注意点</a><a href="#budget">予算の配分を考える</a><a href="#checklist">購入前チェックリスト</a><a href="#faq">よくある疑問</a></nav></aside><div class="article-main">
+  <section id="decision" class="editor-section"><p class="eyebrow">01 / BEFORE COMPARING</p><h2>迷ったら、先に3つだけ決める</h2><div class="decision-grid"><article><b>01</b><h3>何を動かす？</h3><p>ソフト名・ゲーム名・教材名を書き出す。学校や勤務先の指定があれば、それを最優先にします。</p></article><article><b>02</b><h3>どこで使う？</h3><p>自宅中心か、毎日持ち運ぶか。重さ、画面サイズ、充電方法を使う場所に合わせます。</p></article><article><b>03</b><h3>何まで予算に含める？</h3><p>本体だけでなく、Office、外部画面、保証、周辺機器まで含めた総額を考えます。</p></article></div><div class="editor-note"><strong>同じ「Core i5」でも、同じ性能とは限りません。</strong><p>CPUの型番・世代、メモリ容量、画面解像度が違うと、比較する条件も変わります。広告の大きな文字より、仕様表の具体的な数字を先に見ましょう。</p></div></section>
+  <section id="usage" class="editor-section"><p class="eyebrow">02 / BY PURPOSE</p><h2>用途に合わせて、優先順位を変える</h2><div class="usage-tabs" role="group" aria-label="用途を選択"><button v-for="g in usageGuides" :key="g.id" :aria-pressed="usage === g.id" @click="usage=g.id">{{g.label}}</button></div><div class="usage-result" aria-live="polite"><h3>{{activeUsage.title}}</h3><p>{{activeUsage.text}}</p><ul><li v-for="point in activeUsage.points" :key="point">{{point}}</li></ul><p class="takeaway"><strong>選ぶ順番：</strong>{{activeUsage.next}}</p></div></section>
+  <section id="specs" class="editor-section"><p class="eyebrow">03 / READ THE SPECS</p><h2>スペック表は、ここを読む</h2><p>数字が大きいものを選ぶだけでは、予算を使う場所を間違えてしまいます。使い方と結び付けて比較すると、必要な項目が見えてきます。</p><div class="table-scroll" tabindex="0" role="region" aria-label="スペックの読み方"><table class="spec-guide"><caption>比較項目と、購入前に確認する理由</caption><thead><tr><th>項目</th><th>比較するポイント</th><th>見落としやすいところ</th></tr></thead><tbody><tr><th>CPU</th><td>シリーズ名に加え、数字と末尾まで含む型番を確認。使うソフトの推奨条件と照合します。</td><td>「第○世代」「高速」の表現だけで選ばない。</td></tr><tr><th>メモリ</th><td>同時に開くアプリを想定し、容量と増設の可否を確認します。</td><td>容量が多くてもCPUやストレージの弱点を補えるとは限りません。</td></tr><tr><th>SSD</th><td>アプリ・写真・動画・開発データに必要な容量と、追加保存先を考えます。</td><td>表示容量のすべてを自分のデータに使えるわけではありません。</td></tr><tr><th>画面</th><td>サイズと解像度を別々に確認。色調整をするなら色域、窓際なら映り込みも検討。</td><td>14型でも1366×768と1920×1080では情報量が異なります。</td></tr><tr><th>端子</th><td>外部画面・マウス・充電器を同時につなげるか確認します。</td><td>USB-Cの形状だけでは充電・映像出力への対応は分かりません。</td></tr><tr><th>保証</th><td>期間、対象部品、送料、修理・交換・返品の条件を読みます。</td><td>中古のバッテリーが保証対象外の場合があります。</td></tr></tbody></table></div></section>
+  <section id="comparison" class="editor-section"><p class="eyebrow">04 / SIDE BY SIDE</p><h2>掲載モデルの仕様を一覧で比較</h2><p>すべてを同じ用途の「おすすめ」として並べてはいません。仕様が固定された中古モデルと、複数構成から選ぶ商品を区別して比較してください。</p><div class="table-scroll" tabindex="0" role="region" aria-label="掲載モデル比較表"><table class="model-table"><caption>販売ページの記載を整理／2026年10月31日確認</caption><thead><tr><th scope="col">項目</th><th v-for="p in products" :key="p.id" scope="col"><a :href="'#'+p.id">{{p.title}}</a></th></tr></thead><tbody><tr v-for="row in rows" :key="row.key"><th scope="row">{{row.label}}</th><td v-for="p in products" :key="p.id">{{p[row.key]}}</td></tr><tr><th scope="row">確認状況</th><td v-for="p in products" :key="p.id">{{p.status}}</td></tr><tr><th scope="row">詳細</th><td v-for="p in products" :key="p.id"><a :href="'#'+p.id">特徴と注意点へ ↓</a></td></tr></tbody></table></div><p class="small-note">スマホでは表を左右にスクロールできます。掲載価格は構成・在庫の変動を確認できないため固定表示していません。</p></section>
+  <section id="products" class="editor-section"><p class="eyebrow">05 / MODEL NOTES</p><h2>機種別に見る、特徴と注意点</h2><div class="search"><label for="search">商品名</label><input id="search" v-model="query" type="search" placeholder="ThinkPad、Dell など"><label for="condition">状態</label><select id="condition" v-model="filter"><option>すべて</option><option>中古</option></select><span role="status">{{filtered.length}}件</span></div><p v-if="!filtered.length">該当する商品はありません。<button @click="query='';filter='すべて'">絞り込みを解除</button></p>
+  <article v-for="p in filtered" :id="p.id" :key="p.id" class="model-detail"><div class="model-top"><figure class="model-photo"><a :href="p.link" target="_blank" rel="sponsored nofollow noopener" :aria-label="p.title+'の商品写真・楽天で確認（PR）'"><img :src="p.image" :alt="p.title+' 販売店掲載の商品画像'" width="600" height="600" loading="lazy" decoding="async"></a><figcaption>販売店掲載画像・PR<br>外観・付属品は選択する構成で異なります</figcaption></figure><div><span class="pill">{{p.condition}}</span><h3>{{p.title}}</h3><p class="model-summary">{{p.summary}}</p></div></div><dl class="quick-specs"><div><dt>CPU</dt><dd>{{p.cpu}}</dd></div><div><dt>メモリ / SSD</dt><dd>{{p.memory}} / {{p.ssd}}</dd></div><div><dt>画面</dt><dd>{{p.display}}</dd></div></dl><h4>どんな条件で検討する？</h4><p>{{p.fit}}</p><div class="pros-cons"><div><h4>仕様から分かる特徴</h4><p>{{p.good}}</p></div><div><h4>購入前に確認したい点</h4><p>{{p.caution}}</p></div></div><p class="takeaway">{{p.verdict}}</p><div class="model-actions"><label class="compare-check"><input v-model="selected" type="checkbox" :value="p.id" :disabled="selected.length >= 3 && !selected.includes(p.id)"> 比較に追加（最大3件）</label><a class="buy" :href="p.link" rel="sponsored nofollow noopener" target="_blank">楽天で現在の価格・構成を見る ↗ <small>PR</small></a></div><p class="small-note">仕様の出典：<a :href="p.source" target="_blank" rel="noopener">販売店の商品ページ</a>（2026年10月31日確認）。内容は変更される場合があります。</p></article>
+  <section v-if="compared.length" class="comparison" aria-live="polite"><h3>選択した{{compared.length}}件を比較</h3><button @click="selected=[]">比較をクリア</button><div class="table-scroll" tabindex="0" role="region" aria-label="選択した商品の比較"><table><thead><tr><th>項目</th><th v-for="p in compared" :key="p.id">{{p.title}}</th></tr></thead><tbody><tr v-for="row in rows" :key="row.key"><th>{{row.label}}</th><td v-for="p in compared" :key="p.id">{{p[row.key]}}</td></tr></tbody></table></div></section><p class="small-note">店舗改装中などで仕様を確認できなかった商品は掲載を見合わせています。</p></section>
+  <section id="budget" class="editor-section"><p class="eyebrow">06 / TOTAL COST</p><h2>予算は「本体価格＋必要なもの」で考える</h2><p>本体が安くても、必要なOfficeや外部モニターを足すと予算を超えることがあります。反対に、学校や勤務先のソフトが使える場合、Office付きモデルに限定する必要がないこともあります。</p><div class="cost-formula"><span>PC本体</span><b>＋</b><span>ソフト・周辺機器</span><b>＋</b><span>保証・送料</span></div><h3>予算を抑えたいとき</h3><p>まず不要な付属品や機能を整理します。そのうえで中古も比較しますが、状態の確認にかかる手間や、バッテリーの保証がない場合の負担も考えましょう。必要なソフトの要件を満たさないPCを選ぶと、買い直しにつながる可能性があります。</p><h3>長く使いたいとき</h3><p>メモリやSSDを増設できるか、修理の窓口が明確か、保証対象はどこまでかを確認します。「大容量だから長く使える」と決めつけず、OS・ソフトの対応条件と修理のしやすさを合わせて判断してください。</p><NuxtLink to="/guides/office-laptop-checklist">Office付きPCの確認ポイントを詳しく読む →</NuxtLink></section>
+  <section id="checklist" class="editor-section"><p class="eyebrow">07 / FINAL CHECK</p><h2>カートに入れる前のチェックリスト</h2><ol class="buy-checks"><li><strong>選択中の構成を確認</strong><span>商品ページの代表写真ではなく、注文するCPU・メモリ・SSD・画面を記録します。</span></li><li><strong>必要なソフトの要件と照合</strong><span>対応OS、推奨メモリ、GPU、空き容量を確認。Windows 11は搭載表記だけでなく正式な対応も確認。</span></li><li><strong>付属ソフトとライセンスを確認</strong><span>Officeの正式名称、利用期間、再インストール方法、提供される証明を確認します。</span></li><li><strong>保証・返品を確認</strong><span>バッテリーの扱い、不具合時の連絡期限、送料負担を読みます。</span></li><li><strong>受け取り後の確認時間を確保</strong><span>起動、充電、画面、入力、通信、外部端子を、販売店の連絡期限内に確認します。</span></li></ol></section>
+  <section id="faq" class="editor-section"><p class="eyebrow">08 / FAQ</p><h2>ノートPC選びでよくある疑問</h2><details><summary>中古と新品、どちらを選べばいい？</summary><p>状態・保証の説明を理解して選べるなら中古も候補です。持ち歩く頻度が高く、バッテリーを重視する場合や、購入後の確認に時間をかけたくない場合は、新品も含めて比較しましょう。</p></details><details><summary>「Office付き」ならWordとExcelは使える？</summary><p>表示だけでは断定できません。Microsoft Officeなのか互換ソフトなのか、含まれるアプリと利用期間を確認してください。学校や勤務先のライセンスが利用できるかも購入前に確認します。</p></details><details><summary>メモリが多ければ動作は速い？</summary><p>メモリ不足が原因の場面には関係しますが、すべての処理が速くなるわけではありません。CPU、ストレージ、使用ソフトの条件も影響します。容量だけで性能を順位付けしないことが大切です。</p></details><details><summary>このページは実機レビュー？</summary><p>販売ページの仕様を整理し、選び方を解説した比較ガイドです。速度・画質・駆動時間の実測評価は含みません。購入時はリンク先の最新構成をご確認ください。</p></details></section>
+  <section class="editor-section"><h2>目的別に、さらに詳しく</h2><div class="related-guides"><NuxtLink v-for="g in guides" :key="g.slug" :to="'/guides/'+g.slug">{{g.title}} →</NuxtLink></div><h3>公式情報を確認する</h3><ul><li><a href="https://www.microsoft.com/ja-jp/windows/windows-11-specifications" target="_blank" rel="noopener">Microsoft：Windows 11のシステム要件</a></li><li><a href="https://code.visualstudio.com/docs/supporting/requirements" target="_blank" rel="noopener">Visual Studio Code：動作要件</a></li></ul></section>
+  </div></div></div></template>

@@ -1,0 +1,4 @@
+<script setup lang="ts">
+import { guides } from '~/data/guides'
+usePageSeo('ノートパソコンの選び方ガイド', 'プログラミング学習、中古PC、Office付きPC。購入前の疑問から選べるパソコン選びのガイドです。', '/guides')
+</script><template><div class="section"><NuxtLink to="/">ホーム</NuxtLink><p class="eyebrow">BUYING GUIDES</p><h1>選ぶ前に、知っておきたいこと。</h1><p class="lead">スペックの数字を、あなたの使い方につなげる。</p><div class="guide-grid"><NuxtLink v-for="(g,i) in guides" :key="g.slug" :to="'/guides/'+g.slug" class="guide-card"><span class="number">0{{i+1}}</span><span class="pill">{{g.tag}}</span><h2>{{g.title}}</h2><p>{{g.description}}</p><span>ガイドを読む →</span></NuxtLink></div></div></template>
