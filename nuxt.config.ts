@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  modules: ['@vercel/analytics'],
   compatibilityDate: '2025-07-15',
   srcDir: '.',
   // Keep payloads inline to avoid the prerender cache rejecting the root URL.
